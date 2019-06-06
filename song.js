@@ -5,6 +5,8 @@ $(function () {
     $.get('./json/songs.json').done(function (res) {
         var obj = res[index];
         initPlayer(obj);
+        $('.page .loading').remove();
+        
     })
     function initPlayer(obj) {
         $('.cover')[0].src = obj['album'];
@@ -52,7 +54,6 @@ $(function () {
                 $('.lines').css('transform', `translateY(-${delta}px`);
             }
         }, 300);
-
     }
 
     function initText(obj) {
