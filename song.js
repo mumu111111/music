@@ -5,8 +5,6 @@ $(function () {
     $.get('./json/songs.json').done(function (res) {
         var obj = res[index];
         initPlayer(obj);
-        $('.page .loading').remove();
-        
     })
     function initPlayer(obj) {
         $('.cover')[0].src = obj['album'];
@@ -14,6 +12,7 @@ $(function () {
 
         var audio = document.createElement('audio');
         audio.src = obj['mp3'];
+        
         audio.oncanplay = function () {
             initText(obj); // 避免文字加载太快
         }
