@@ -61,7 +61,7 @@ $(function () {
             var $ul = $('.hotList .musicList');
             if($ul.attr('dataLoaded') === 'yes'){ return; }
     
-            $.get('./json/hot_music.json').done(function (result) {
+            $.get('./json/latest_music.json').done(function (result) {
                 result.map(function (value,index) {
                     var $li = $ul.children().eq(index);
                     $li.find('h4').text(value['name']);
@@ -79,6 +79,11 @@ $(function () {
     
             })
         }
+        $('.hotList>ul').on('click','li',function (e) {
+            var index = $(this).index();
+            // console.log(index);
+            location.href = './song.html?id=' + index;
+        })
     
         $('#form').on('submit',function () {
             this.preventDefault();

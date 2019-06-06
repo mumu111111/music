@@ -13,7 +13,7 @@ $(function () {
         var audio = document.createElement('audio');
         audio.src = obj['mp3'];
         audio.oncanplay = function () {
-            // initText(obj); // 避免文字加载太快很尴尬...
+            initText(obj); // 避免文字加载太快
         }
         $('.icon-play').on('touchstart', function () {
             $('.disc').addClass('active');
