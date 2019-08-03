@@ -393,23 +393,8 @@ a{
 .suggestSearch.show {
     display: block;
 }
-.suggestSearch>ul{
-    display: none;
-}
-.suggestSearch>ul.show{
-    display: block;
-}
-.suggestSearch>ul>li {
-    position: relative;
-}
-.suggestSearch .searchIcon{
-    width: 6vw;
-    height: 6vw;
-    position: absolute;
-    top: 50%;
-    left: 4vw;
-    transform: translate(-50%, -50%);
-    fill: #ccc;
+#output li{
+    padding: 10px; 
 }
 .suggestSearch>h3{
     padding: 3vw 0;
@@ -417,17 +402,6 @@ a{
     border-bottom: 1px solid rgba(0,0,0,.1);
     color: #507daf;
     font-size: 1.2em;
-}
-.suggestSearch>ul>li>p{
-    padding: 3vw 0;
-    margin-left: 8vw;
-    border-bottom: 1px solid rgba(0,0,0,.1);
-    font-size: 1em;
-    color: #333333;
-    /*单行文字溢出*/
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
 }
 
 
